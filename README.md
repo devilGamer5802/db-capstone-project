@@ -170,59 +170,19 @@ IGNORE_WHEN_COPYING_END
 
 A Python client was used to connect to and interact with the Little Lemon MySQL database.
 
-Task 1: Establishing a Connection
+### Task 1: Establishing a Connection
 
 The mysql-connector-python library was used.
-
 A connection was established to the MySQL server.
-
 A cursor object was created to execute SQL queries.
-
 The LittleLemonDB (or your booking DB name) was selected for use.
 
-
-Task 2: Querying the Database 
-
+### Task 2: Querying the Database 
 This section demonstrates querying the database. For instance, retrieving a list of all bookings for a specific date.
 
-
-# Example Query (adapt to your booking system)
-# query = """
-# SELECT b.BookingID, c.FullName, b.BookingDate, b.TableNumber, b.NumberOfGuests
-# FROM Bookings b
-# JOIN Customers c ON b.CustomerID = c.CustomerID
-# WHERE b.BookingDate = '2024-07-15';
-# """
-
-# Example from original sample (can be adapted)
-query_example = """
-SELECT C.FullName, C.ContactNumber, C.Email, O.TotalCost
-FROM Customers AS C
-INNER JOIN Orders AS O ON C.CustomerID = O.CustomerID
-WHERE O.TotalCost > 60;
-"""
-try:
-    if 'cursor' in locals() and cursor: # Check if cursor exists
-        cursor.execute(query_example) # or your specific booking query
-        results = cursor.fetchall()
-        columns = cursor.column_names
-
-        print("\nQuery Results:")
-        print(columns)
-        for result in results:
-            print(result)
-except Error as er:
-    print(f"Error executing query: {er.msg}")
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Python
-IGNORE_WHEN_COPYING_END
-Task 3: Closing the Connection
-
+### Task 3: Closing the Connection
 It's important to close the database connection when done.
-
+```
 try:
     if 'connection' in locals() and connection.is_connected():
         if 'cursor' in locals() and cursor:
@@ -234,34 +194,19 @@ try:
         print("Connection was not established or already closed.")
 except NameError:
     print("Connection or cursor was not defined.") # Handles cases where connection failed initially
-IGNORE_WHEN_COPYING_START
-content_copy
-download
-Use code with caution.
-Python
-IGNORE_WHEN_COPYING_END
+```
 4. Tableau Data Analysis and Reporting
 
 Tableau was connected to the Little Lemon MySQL database to create reports and dashboards for analyzing booking data.
-
 Task 1: Connecting Tableau to MySQL
-
 Tableau Desktop was used to establish a direct connection to the MySQL database housing the booking system data.
-
 Relevant tables (e.g., Bookings, Customers, Tables) were selected and relationships were defined in Tableau's data source pane if not automatically inferred.
-
 Task 2: Generating Data Reports and Dashboards
-
 Various visualizations and dashboards were created to provide insights into Little Lemon's booking operations. Examples include:
-
 A bar chart showing the number of bookings per day/week/month.
-
 A line chart illustrating booking trends over time.
-
 A table view detailing upcoming bookings.
-
 A dashboard combining multiple views for a comprehensive overview of booking activity.
-
 
 ![alt text](img/1.png)
 
