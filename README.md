@@ -1,7 +1,3 @@
-Okay, I've updated the README.md template based on your project description. I've focused on aligning the tasks and descriptions with the creation of a booking system and the specific stored procedures mentioned in your grading criteria.
-
-Here's the modified readme.md:
-
 # Little Lemon Restaurant Booking System - Database Project
 
 ## Overview
