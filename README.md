@@ -25,7 +25,7 @@ The project involved the following key actions and deliverables:
 
 ## Deliverables Included
 
-*   **ER Diagram:** A PNG file showing the connections between the tables in the booking system (`er_diagram_booking.png`).
+*   **ER Diagram:** A PNG file showing the connections between the tables in the booking system (`er_diagram.png`).
 *   **MySQL Workbench Model:** The `.mwb` file used for data modeling.
 *   **SQL Schema File:** An `.sql` file containing the DDL statements for creating the Little Lemon booking database schema (`little_lemon_booking_db_schema.sql`).
 *   **Tableau Workbook:** The `.twbx` file containing all worksheets and dashboards related to booking data analysis.
